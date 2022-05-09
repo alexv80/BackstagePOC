@@ -23,6 +23,6 @@
       "lifecycle": "production",
       "owner": "sitecore/PlatformSystemUA",
       "system": "Inventory",
-      "dependsOn": "[component:sitecore/InventoryCore]"
+      "dependsOn": ["component:sitecore/InventoryCore"]
     }
   }
