@@ -21,7 +21,7 @@
     "spec": {
       "type": "service",
       "lifecycle": "production",
-      "owner": "sitecore/ONSI-teamB",
+      "owner": "sitecore/IdentityAndAccessManagement",
       "system": "Identity",
 	  "dependsOn": ["resource:sitecore/SqlDb"]
     }
