@@ -23,6 +23,6 @@
       "lifecycle": "production",
       "owner": "sitecore/PlatformSystemUA",
       "system": "PlatformExperience",
-	  "dependsOn": ["resource:sitecore/SqlDb"]
+      "dependsOn": ["resource:sitecore/SqlDb", "component:sitecore/Identity"]
     }
   }
