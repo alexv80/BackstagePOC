@@ -1,0 +1,11 @@
+apiVersion: backstage.io/v1alpha1
+kind: Location
+metadata:
+  name: examples
+  description: A collection of all Backstage demo features
+spec:
+  type: demo
+  targets:
+    - ./Components/Identity.json
+    - ./Components/PlatformInventory.json
+    - ./Components/Secrets.json
