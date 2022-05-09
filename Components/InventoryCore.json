@@ -22,6 +22,7 @@
       "type": "service",
       "lifecycle": "production",
       "owner": "sitecore/PlatformSystemUA",
-      "system": "Inventory"
+      "system": "Inventory",
+	  "dependsOn": ["resource:sitecore/SqlDb"]
     }
   }
