@@ -21,6 +21,6 @@
       "type": "service",
       "lifecycle": "production",
       "owner": "sitecore/PlatformSystemINBE",
-      "system": "Platform"
+      "system": "PlatformExperience"
     }
   }
