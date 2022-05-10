@@ -3,7 +3,7 @@ kind: API
 metadata:
   name: Inventory
   namespace: sitecore
-  description: The Tenants API
+  description: The Inventory API
   tags:
     - inventory
     - tenants
@@ -12,4 +12,4 @@ spec:
   lifecycle: dev
   owner: sitecore/platformsystemua
   definition: 
-    $text: https://github.com/Efi4/backstage/blob/main/InventoryApiDefinition.json
+    $text: https://github.com/alexv80/BackstagePOC/blob/main/APIs/inventoryApiDefinition.json
