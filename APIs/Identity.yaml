@@ -11,4 +11,4 @@ spec:
   lifecycle: production
   owner: sitecore/identityandaccessmanagement
   definition: 
-    $text: https://github.com/alexv80/BackstagePOC/blob/main/APIs/identityApiDefinition.json
+    $text: https://github.com/alexv80/BackstagePOC/blob/main/APIs/inventoryApiDefinition.json
