@@ -23,6 +23,7 @@
       "lifecycle": "production",
       "owner": "sitecore/PlatformSystemUA",
       "system": "PlatformExperience",
+      "providesApis": ["api:sitecore/Tenants"],
       "dependsOn": ["resource:sitecore/SqlDb", "component:sitecore/Identity"]
     }
   }
