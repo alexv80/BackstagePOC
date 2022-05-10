@@ -1,0 +1,14 @@
+apiVersion: backstage.io/v1alpha1
+kind: API
+metadata:
+  name: Identity
+  namespace: sitecore
+  description: The Identity API
+  tags:
+    - identity
+spec:
+  type: openapi
+  lifecycle: production
+  owner: sitecore/identityandaccessmanagement
+  definition: 
+    $text: https://github.com/alexv80/BackstagePOC/blob/main/APIs/identityApiDefinition.json
