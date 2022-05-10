@@ -1,0 +1,15 @@
+apiVersion: backstage.io/v1alpha1
+kind: API
+metadata:
+  name: Inventory
+  namespace: sitecore
+  description: The Tenants API
+  tags:
+    - inventory
+    - tenants
+spec:
+  type: openapi
+  lifecycle: dev
+  owner: sitecore/platformsystemua
+  definition: 
+    $text: https://github.com/Efi4/backstage/blob/main/InventoryApiDefinition.json
