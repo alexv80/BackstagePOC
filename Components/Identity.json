@@ -23,6 +23,7 @@
       "lifecycle": "production",
       "owner": "sitecore/IdentityAndAccessManagement",
       "system": "Portal",
+	"providesApis": ["api:sitecore/Identity"],
 	  "dependsOn": ["resource:sitecore/SqlDb"]
     }
   }
