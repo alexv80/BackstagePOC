@@ -21,7 +21,7 @@
     "spec": {
       "type": "service",
       "lifecycle": "production",
-      "owner": "sitecore/IdentityAndAccessManagement",
+      "owner": "group:default/sitecore_caas_-_identity_team",
       "system": "Portal",
 	"providesApis": ["api:sitecore/Identity"],
 	  "dependsOn": ["resource:sitecore/SqlDb"]
