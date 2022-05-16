@@ -22,7 +22,7 @@
       "lifecycle": "production",
       "owner": "group:default/sitecore_caas_-_identity_team",
       "system": "Portal",
-	"providesApis": ["api:sitecore/Identity"],
-	  "dependsOn": ["resource:sitecore/SqlDb"]
+	"providesApis": ["api:default/Identity"],
+	  "dependsOn": ["resource:default/SqlDb"]
     }
   }
