@@ -19,7 +19,6 @@
     },
     "spec": {
       "type": "service",
-      "lifecycle": "production",
       "owner": "group:default/grp_-_platform_experience_team",
       "system": "Platform",
       "providesApis": ["api:default/Inventory"],
