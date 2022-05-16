@@ -1,0 +1,23 @@
+{
+    "apiVersion": "backstage.io/v1alpha1",
+    "kind": "Component",
+    "metadata": {
+      "name": "Inventory_without_annotations",
+      "description": "Platform inventory component",
+      "links": [
+        {
+          "url": "https://stylelabs.atlassian.net/jira/software/c/projects/PRODOT/boards/419/backlog?issueLimit=100",
+          "title": "My Dashboard"
+        }
+      ]
+    },
+    "spec": {
+      "type": "service",
+      "lifecycle": "production",
+      "owner": "group:default/grp_-_platform_experience_team",
+      "system": "Platform",
+      "providesApis": ["api:default/Inventory"],
+      "consumesApis": ["api:default/Identity"],
+      "dependsOn": ["resource:sdefault/SqlDb", "component:default/Identity"]
+    }
+  }
