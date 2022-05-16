@@ -2,7 +2,6 @@ apiVersion: backstage.io/v1alpha1
 kind: API
 metadata:
   name: Inventory
-  namespace: sitecore
   description: The Inventory API
   tags:
     - inventory
