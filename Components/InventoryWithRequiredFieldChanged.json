@@ -1,5 +1,5 @@
 {
-    "apiVersion": "backstage.io/v1alpha1",
+    "apiVersion": "backstage.iov1alpha1",
     "kind": "Component",
     "metadata": {
       "name": "Inventory_validation_wasnot_passed",
@@ -20,7 +20,7 @@
     "spec": {
       "type": "service",
       "lifecycle": "production",
-      "owner": "group:default/grp_-_platform_experience_team",
+      "owner": "group/default-grp_-_platform_experience_team",
       "system": "Platform",
       "providesApis": ["api:default/Inventory"],
       "consumesApis": ["api:default/Identity"],
