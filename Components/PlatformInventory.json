@@ -3,7 +3,6 @@
     "kind": "Component",
     "metadata": {
       "name": "Inventory",
-      "namespace": "sitecore",
       "description": "Platform inventory component",
       "annotations": {
         "backstage.io/managed-by-location": "url:https://github.com/backstage/backstage/tree/master/packages/catalog-model/examples/components/wayback-search-component.yaml",
