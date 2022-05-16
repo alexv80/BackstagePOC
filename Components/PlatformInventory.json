@@ -22,8 +22,8 @@
       "lifecycle": "production",
       "owner": "group:default/grp_-_platform_experience_team",
       "system": "Platform",
-      "providesApis": ["api:sitecore/Inventory"],
-      "consumesApis": ["api:sitecore/Identity"],
-      "dependsOn": ["resource:sitecore/SqlDb", "component:sitecore/Identity"]
+      "providesApis": ["api:default/Inventory"],
+      "consumesApis": ["api:default/Identity"],
+      "dependsOn": ["resource:sdefault/SqlDb", "component:default/Identity"]
     }
   }
