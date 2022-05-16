@@ -3,7 +3,6 @@
     "kind": "Component",
     "metadata": {
       "name": "TenantActivationService",
-      "namespace": "sitecore",
       "description": "Tenant activation service component",
       "annotations": {
         "backstage.io/managed-by-location": "url:https://github.com/backstage/backstage/tree/master/packagels/catalog-model/examples/components/wayback-search-component.yaml",
@@ -20,7 +19,7 @@
     "spec": {
       "type": "service",
       "lifecycle": "production",
-      "owner": "sitecore/PlatformSystemINBE",
+      "owner": "group:default/grp_-_platform_experience_team",
       "system": "Platform"
     }
   }
