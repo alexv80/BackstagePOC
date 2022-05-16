@@ -21,7 +21,7 @@
     "spec": {
       "type": "service",
       "lifecycle": "production",
-      "owner": "grp_-_platform_experience_team",
+      "owner": "group:default/grp_-_platform_experience_team",
       "system": "Platform",
       "providesApis": ["api:sitecore/Inventory"],
       "consumesApis": ["api:sitecore/Identity"],
