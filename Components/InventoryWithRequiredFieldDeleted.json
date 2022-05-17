@@ -1,5 +1,6 @@
 {
-    "apiVersion": "backstage.io/v1alpha1",
+    "apiVersion": "backstage.io/v1/alpha1",
+    "kind": "Component",
     "metadata": {
       "name": "Inventory_deleted_field",
       "description": "Platform inventory component",
