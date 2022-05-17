@@ -10,7 +10,7 @@
         "backstage.io/source-location": "url:https://bitbucket.org/stylelabsdev/sitecore.platform.inventory/src/master/src/",
         "backstage.io/techdocs-ref": "url:https://bitbucket.org/stylelabsdev/sitecore.platform.inventory/src/master/README.md",
         "backstage.io/view-url" : "url:https://bitbucket.org/stylelabsdev/sitecore.platform.inventory/src/master/",
-        "backstage.io/editing-url" : "url:https://bitbucket.org/stylelabsdev/sitecore.platform.inventory/src/master/"
+        "backstage.io/edit-url" : "url:https://bitbucket.org/stylelabsdev/sitecore.platform.inventory/src/master/"
       },
       "links": [
         {
