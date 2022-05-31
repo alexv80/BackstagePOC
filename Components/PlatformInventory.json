@@ -26,6 +26,6 @@
       "system": "Platform",
       "providesApis": ["api:default/Inventory"],
       "consumesApis": ["api:default/Identity"],
-      "dependsOn": ["resource:sdefault/SqlDb", "component:default/Identity"]
+      "dependsOn": ["resource:default/SqlDb", "component:default/Identity"]
     }
   }
