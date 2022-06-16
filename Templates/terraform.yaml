@@ -61,9 +61,6 @@ spec:
           type: string
           description: Branch
           ui:field: EntityNamePicker
-    - title: Component information3
-      required:
-      properties:
         ingress_submodules:
           title: Ingress Submodules
           description: Ingress Submodules
