@@ -85,23 +85,23 @@ spec:
           ui:field: EntityNamePicker
     - title: Choose a location
       required:
-        - repoUrl
+#        - repoUrl
       properties:
-        repoUrl:
-          title: Repository Location
-          type: string
-          ui:field: RepoUrlPicker
-          ui:options:
-            allowedHosts:
-              - github.com
-        branchName:
-          title: Name of the branch
-          type: string
-          ui:field: EntityNamePicker
-        prTitle:
-          title: Title of PR
-          type: string
-          ui:field: EntityNamePicker
+#        repoUrl:
+#          title: Repository Location
+#          type: string
+#          ui:field: RepoUrlPicker
+#          ui:options:
+#            allowedHosts:
+#              - github.com
+#        branchName:
+#          title: Name of the branch
+#          type: string
+#          ui:field: EntityNamePicker
+#        prTitle:
+#          title: Title of PR
+#          type: string
+#          ui:field: EntityNamePicker
   steps:
 #    - id: template
 #      name: Fetch Skeleton + Template
