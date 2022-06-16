@@ -14,8 +14,8 @@ spec:
   parameters:
     - title: Component configuration
       required:
-#        - workspace_name
-#        - organization_name
+        - workspace_name
+        - organization_name
 #        - execution_mode
 #        - auto_apply
 #        - speculative_enabled
@@ -43,6 +43,7 @@ spec:
           title: Execution Mode
           type: string
           description: Execution Mode
+          ui:field: EntityNamePicker
         auto_apply:
           title: Auto apply deployment
           description: Auto apply deployment
