@@ -14,16 +14,16 @@ spec:
   parameters:
     - title: Component configuration
       required:
-        - workspace_name
-        - organization_name
-        - execution_mode
-        - working_directory
-        - identifier
-        - branch
-        - oauth_token_id
-        - environment
-        - component
-        - branch
+#        - workspace_name
+#        - organization_name
+#        - execution_mode
+#        - working_directory
+#        - identifier
+#        - branch
+#        - oauth_token_id
+#        - environment
+#        - component
+#        - branch
       properties:
         workspace_name:
           title: Name
