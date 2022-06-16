@@ -101,18 +101,23 @@ spec:
           type: string
           ui:field: EntityNamePicker
   steps:
-#    - id: template
-#      name: Fetch Skeleton + Template
-#      action: fetch:template
-#      input:
-#        url: https://github.com/alexv80/RepoForImport
-#        copyWithoutRender:
-#          - .github/workflows/*
-#        values:
-#          component_id: ${{ parameters.component_id }}
-#          description: ${{ parameters.description }}
-#          destination: ${{ parameters.repoUrl | parseRepoUrl }}
-#          owner: ${{ parameters.owner }}
+    - id: updateConfiguration
+      name: update provisioning configuration
+      action: fetch:template
+      input:
+        url: https://github.com/alexv80/RepoForImport/blob/main/workspace.auto.tfvars.njk
+        values:
+          workspace_name: ${{ parameters.workspace_name }}
+          organization_name: ${{ parameters.organization_name }}
+          execution_mode: ${{ parameters.execution_mode }}
+          auto_apply: ${{ parameters.auto_apply }}
+          speculative_enabled: ${{ parameters.speculative_enabled }}
+          working_directory: ${{ parameters.working_directory }}
+          identifier: ${{ parameters.identifier }}
+          ingress_submodules: ${{ parameters.ingress_submodules }}
+          component: ${{ parameters.component }}
+          environment: ${{ parameters.environment }}
+          oauth_token_id: ${{ parameters.oauth_token_id }}
 
     - id: pullRequest
       name: Create pull request
