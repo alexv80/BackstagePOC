@@ -43,10 +43,6 @@ spec:
           description: Auto apply deployment
           type: boolean
           default: false
-    - title: Component information2
-      required:
-        - working_directory
-      properties:
         speculative_enabled:
           title: Speculative Enabled
           description: Speculative Enabled
