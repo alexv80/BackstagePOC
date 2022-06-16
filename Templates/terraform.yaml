@@ -106,6 +106,7 @@ spec:
       action: fetch:template
       input:
         url: https://github.com/alexv80/RepoForImport/blob/main/workspace.auto.tfvars.njk
+        targetPath: https://github.com/AVK_sitecore/TerraformScripts/blob/master/deployments/workspace/workspace.auto.tfvars
         values:
           workspace_name: ${{ parameters.workspace_name }}
           organization_name: ${{ parameters.organization_name }}
