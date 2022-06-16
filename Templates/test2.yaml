@@ -1,0 +1,147 @@
+apiVersion: scaffolder.backstage.io/v1beta3
+kind: Template
+metadata:
+  name: avkTerraformTest
+  title: Terraform integration
+  description: Test integration with terraform
+  tags:
+    - terraform
+    - deployment
+    - provisioning
+spec:
+  owner: avk@sitecore.net
+  type: component
+  parameters:
+    - title: Component configuration
+      required:
+        - workspace_name
+#        - organization_name
+#        - execution_mode
+#        - working_directory
+#        - identifier
+#        - branch
+#        - oauth_token_id
+#        - environment
+#        - component
+#        - branch
+      properties:
+        workspace_name:
+          title: Name
+          type: string
+          description: Unique name of the workspace
+          ui:field: EntityNamePicker
+        organization_name:
+          title: Organization name
+          type: string
+          description: Name of the organization
+        execution_mode:
+          title: Execution Mode
+          type: string
+          description: Execution Mode
+        auto_apply:
+          title: Auto apply deployment
+          description: Auto apply deployment
+          type: boolean
+          default: false
+        speculative_enabled:
+          title: Speculative Enabled
+          description: Speculative Enabled
+          type: boolean
+          default: true
+        working_directory:
+          title: Working Directory
+          type: string
+          description: Working Directory
+        identifier:
+          title: Identifier
+          type: string
+          description: identifier
+        branch:
+          title: Branch
+          type: string
+          description: Branch
+          ui:field: EntityNamePicker
+        ingress_submodules:
+          title: Ingress Submodules
+          description: Ingress Submodules
+          type: boolean
+          default: false
+        oauth_token_id:
+          title: Oauth Token Id
+          type: string
+          description: Oauth Token Id
+          ui:field: EntityNamePicker
+        environment:
+          title: Environment
+          type: string
+          description: Environment
+          ui:field: EntityNamePicker
+        component:
+          title: Component
+          type: string
+          description: Component
+          ui:field: EntityNamePicker
+    - title: Choose a location
+      required:
+        - repoUrl
+      properties:
+        repoUrl:
+          title: Repository Location
+          type: string
+          ui:field: RepoUrlPicker
+          ui:options:
+            allowedHosts:
+              - github.com
+        branchName:
+          title: Name of the branch
+          type: string
+          ui:field: EntityNamePicker
+        prTitle:
+          title: Title of PR
+          type: string
+          ui:field: EntityNamePicker
+  steps:
+    - id: template
+      name: Fetch Skeleton + Template
+      action: fetch:template
+      input:
+        url: https://github.com/alexv80/RepoForImport
+        copyWithoutRender:
+          - .github/workflows/*
+        values:
+          workspace_name: ${{ parameters.workspace_name }}
+          organization_name: ${{ parameters.organization_name }}
+          execution_mode: ${{ parameters.execution_mode }}
+          auto_apply: ${{ parameters.auto_apply }}
+          speculative_enabled: ${{ parameters.speculative_enabled }}
+          working_directory: ${{ parameters.working_directory }}
+          identifier: ${{ parameters.identifier }}
+          ingress_submodules: ${{ parameters.ingress_submodules }}
+          component: ${{ parameters.component }}
+          environment: ${{ parameters.environment }}
+          oauth_token_id: ${{ parameters.oauth_token_id }}
+          component_id: ${{ parameters.component_id }}
+          description: ${{ parameters.description }}
+          destination: ${{ parameters.repoUrl | parseRepoUrl }}
+          owner: ${{ parameters.owner }}
+ #   - id: push
+ #     name: push changes
+ #     action: github:webhook
+ #     input:
+ #       repoUrl: https://github.com/AVK_sitecore/TerraformScripts/blob/master/deployments/workspace/workspace.auto.tfvars
+ #       webhookUrl:  https://github.com/AVK_sitecore/TerraformScripts/blob/master/deployments/workspace/workspace.auto.tfvars
+    - id: publish
+      name: Publish
+      action: publish:github
+      input:
+        allowedHosts: ["github.com"]
+        description: This is ${{ parameters.component_id }}
+        repoUrl: ${{ parameters.repoUrl }}
+
+  output:
+    links:
+      - title: Repository
+        url: ${{ steps.publish.output.remoteUrl }}
+      - title: Open in catalog
+        icon: catalog
+        entityRef: ${{ steps.register.output.entityRef }}
