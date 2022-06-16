@@ -34,6 +34,9 @@ spec:
           title: Organization name
           type: string
           description: Name of the organization
+    - title: Component information1
+      required:
+      properties:
         execution_mode:
           title: Execution Mode
           type: string
