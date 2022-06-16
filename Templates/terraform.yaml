@@ -17,12 +17,12 @@ spec:
         - workspace_name
         - organization_name
         - execution_mode
-        - auto_apply
-        - speculative_enabled
+#        - auto_apply
+#        - speculative_enabled
         - working_directory
         - identifier
         - branch
-        - ingress_submodules
+#        - ingress_submodules
         - oauth_token_id
         - environment
         - component
@@ -67,7 +67,7 @@ spec:
           title: Ingress Submodules
           description: Ingress Submodules
           type: boolean
-          default: true
+          default: false
         oauth_token_id:
           title: Oauth Token Id
           type: string
@@ -91,6 +91,15 @@ spec:
           ui:options:
             allowedHosts:
               - github.com
+        branchName:
+          title: Name of the branch
+          type: string
+        prTitle:
+          title: Title of PR
+          type: string
+        prDescription:
+          title: Description of PR
+          type: string
   steps:
 #    - id: template
 #      name: Fetch Skeleton + Template
@@ -105,13 +114,16 @@ spec:
 #          destination: ${{ parameters.repoUrl | parseRepoUrl }}
 #          owner: ${{ parameters.owner }}
 
-    - id: publish
-      name: Publish
-      action: publish:github
+    - id: pullRequest
+      name: Create pull request
+      action: publish:github:pull-request
       input:
         allowedHosts: ["github.com"]
         description: This is ${{ parameters.workspace_name }}
         repoUrl: ${{ parameters.repoUrl }}
+        branchName: ${{ parameters.branchName }}
+        title: ${{ parameters.prTitle }}
+        description: ${{ parameters.prDescription }}
 
   output:
     links:
