@@ -28,11 +28,28 @@ spec:
 #        - component
 #        - branch
       properties:
-        workspace_name:
+        component_id:
           title: Name
           type: string
-          description: Unique name of the workspace
+          description: Unique name of the component
           ui:field: EntityNamePicker
+        description:
+          title: Description
+          type: string
+          description: Help others understand what this website is for.
+        owner:
+          title: Owner
+          type: string
+          description: Owner of the component
+          ui:field: OwnerPicker
+          ui:options:
+            allowedKinds:
+              - Group
+#        workspace_name:
+#          title: Name
+#          type: string
+#          description: Unique name of the workspace
+#          ui:field: EntityNamePicker
  #       organization_name:
  #         title: Organization name
  #         type: string
