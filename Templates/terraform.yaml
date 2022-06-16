@@ -45,6 +45,9 @@ spec:
           description: Auto apply deployment
           type: boolean
           default: false
+    - title: Component information2
+      required:
+      properties:
         speculative_enabled:
           title: Speculative Enabled
           description: Speculative Enabled
@@ -63,6 +66,9 @@ spec:
           type: string
           description: Branch
           ui:field: EntityNamePicker
+    - title: Component information3
+      required:
+      properties:
         ingress_submodules:
           title: Ingress Submodules
           description: Ingress Submodules
