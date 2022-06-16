@@ -54,12 +54,10 @@ spec:
           title: Working Directory
           type: string
           description: Working Directory
-          ui:field: EntityNamePicker
         identifier:
           title: Identifier
           type: string
           description: identifier
-          ui:field: EntityNamePicker
         branch:
           title: Branch
           type: string
