@@ -2,7 +2,7 @@ apiVersion: scaffolder.backstage.io/v1beta3
 kind: Template
 metadata:
   name: avkTerraformTest2
-  title: Terraform integration
+  title: Terraform integration2
   description: Test integration with terraform
   tags:
     - terraform
