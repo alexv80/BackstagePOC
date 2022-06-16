@@ -28,41 +28,26 @@ spec:
 #        - component
 #        - branch
       properties:
-        component_id:
+        workspace_name:
           title: Name
           type: string
-          description: Unique name of the component
+          description: Unique name of the workspace
           ui:field: EntityNamePicker
-        description:
-          title: Description
+        organization_name:
+          title: Organization name
           type: string
-          description: Help others understand what this website is for.
-        owner:
-          title: Owner
+          description: Name of the organization
+    - title: Component configuration2
+      required:
+        execution_mode:
+          title: Execution Mode
           type: string
-          description: Owner of the component
-          ui:field: OwnerPicker
-          ui:options:
-            allowedKinds:
-              - Group
-#        workspace_name:
-#          title: Name
-#          type: string
-#          description: Unique name of the workspace
-#          ui:field: EntityNamePicker
- #       organization_name:
- #         title: Organization name
- #         type: string
- #         description: Name of the organization
- #       execution_mode:
- #         title: Execution Mode
- #         type: string
- #         description: Execution Mode
- #       auto_apply:
- #         title: Auto apply deployment
- #         description: Auto apply deployment
- #         type: boolean
- #         default: false
+          description: Execution Mode
+        auto_apply:
+          title: Auto apply deployment
+          description: Auto apply deployment
+          type: boolean
+          default: false
  #       speculative_enabled:
  #         title: Speculative Enabled
  #         description: Speculative Enabled
