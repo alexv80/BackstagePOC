@@ -132,8 +132,8 @@ spec:
         repoUrl: ${{ parameters.repoUrl }}
         branchName: ${{ parameters.branchName }}
         title: ${{ parameters.prTitle }}
-        sourcePath: .
-        targetPath: .
+        sourcePath: ./
+        targetPath: ./
 
   output:
     links:
