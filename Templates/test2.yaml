@@ -133,6 +133,7 @@ spec:
     - id: publish
       name: Publish
       action: publish:github
+      repoVisibility: internal
       input:
         allowedHosts: ["github.com"]
         description: This is ${{ parameters.component_id }}
