@@ -105,7 +105,7 @@ spec:
       name: update provisioning configuration
       action: fetch:template
       input:
-        url: https://github.com/alexv80/RepoForImport/blob/main/workspace.auto.tfvars.njk
+        url: https://github.com/alexv80/RepoForImport
         values:
           workspace_name: ${{ parameters.workspace_name }}
           organization_name: ${{ parameters.organization_name }}
