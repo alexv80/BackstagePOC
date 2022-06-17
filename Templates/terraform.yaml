@@ -101,9 +101,10 @@ spec:
           type: string
           ui:field: EntityNamePicker
   steps:
-    - id: updateConfiguration
+    - id: fetch repo input
       name: update provisioning configuration
       action: fetch:template
+      targetPath: RepoForInput
       input:
         url: https://github.com/alexv80/RepoForImport
         values:
@@ -118,6 +119,12 @@ spec:
           component: ${{ parameters.component }}
           environment: ${{ parameters.environment }}
           oauth_token_id: ${{ parameters.oauth_token_id }}
+    - id: fetch repo output
+      name: update provisioning configuration2
+      action: fetch:template
+      targetPath: RepoForOutput
+      input:
+        url: https://github.com/AVK_sitecore/TerraformScripts
  #   - id: push
  #     name: push changes
  #     action: github:webhook
@@ -132,8 +139,8 @@ spec:
         repoUrl: ${{ parameters.repoUrl }}
         branchName: ${{ parameters.branchName }}
         title: ${{ parameters.prTitle }}
-        sourcePath: ./
-        targetPath: ./
+        sourcePath: RepoForInput
+        targetPath: RepoForOutput
 
   output:
     links:
