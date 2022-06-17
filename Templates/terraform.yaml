@@ -119,13 +119,6 @@ spec:
           component: ${{ parameters.component }}
           environment: ${{ parameters.environment }}
           oauth_token_id: ${{ parameters.oauth_token_id }}
-    - id: fetch repo output
-      name: update provisioning configuration2
-      action: fetch:template
-      targetPath: RepoForOutput
-      templateFileExtension: true
-      input:
-        url: https://github.com/AVK_sitecore/TerraformScripts
  #   - id: push
  #     name: push changes
  #     action: github:webhook
@@ -141,7 +134,7 @@ spec:
         branchName: ${{ parameters.branchName }}
         title: ${{ parameters.prTitle }}
         sourcePath: RepoForInput/deployment
-        targetPath: RepoForOutput/deployment
+        targetPath: deployment
 
   output:
     links:
