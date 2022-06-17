@@ -132,8 +132,8 @@ spec:
         repoUrl: ${{ parameters.repoUrl }}
         branchName: ${{ parameters.branchName }}
         title: ${{ parameters.prTitle }}
-        sourcePath: workspace.auto.tfvars
-        targetPath: workspace.auto.tfvars
+        sourcePath: .
+        targetPath: .
 
   output:
     links:
