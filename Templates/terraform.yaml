@@ -132,8 +132,8 @@ spec:
         repoUrl: ${{ parameters.repoUrl }}
         branchName: ${{ parameters.branchName }}
         title: ${{ parameters.prTitle }}
-        sourcePath: https://github.com/alexv80/RepoForImport/blob/main/workspace.auto.tfvars
-        targetPath: https://github.com/AVK_sitecore/TerraformScripts/blob/master/deployments/workspace/workspace.auto.tfvars
+        sourcePath: workspace.auto.tfvars
+        targetPath: workspace.auto.tfvars
 
   output:
     links:
