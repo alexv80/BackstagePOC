@@ -123,6 +123,7 @@ spec:
       name: update provisioning configuration2
       action: fetch:template
       targetPath: RepoForOutput
+      templateFileExtension: true
       input:
         url: https://github.com/AVK_sitecore/TerraformScripts
  #   - id: push
