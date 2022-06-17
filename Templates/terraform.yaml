@@ -105,7 +105,7 @@ spec:
       name: update provisioning configuration
       action: fetch:template
       input:
-        url: https://github.com/AVK_sitecore/TerraformScripts
+        url: https://github.com/alexv80/RepoForImport
         values:
           workspace_name: ${{ parameters.workspace_name }}
           organization_name: ${{ parameters.organization_name }}
